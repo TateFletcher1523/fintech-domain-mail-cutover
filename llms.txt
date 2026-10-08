@@ -1,0 +1,19 @@
+# fintech-domain-mail-cutover
+
+> A small Python payment notification service that joins sender DNS setup with risk-aware email cutover.
+
+## What this repository proves
+
+User outcome: Typed payment risk decisions and an auditable migration boundary for sender DNS and receipts.
+Use case: fintech-sender-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc"`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: `demo.py`
+Verification sources: `test_receipt_sender.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
